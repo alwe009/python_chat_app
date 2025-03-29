@@ -8,8 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js" integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
-    <h1>Python chat app</h1>
-    <!--  -->
+    <!-- <h1>Python chat app</h1> -->
+    <!-- Emmet -->
     <!-- .chat-container>.chat-header{"Python Chat"}+.username-container>span[id="current-username"]+input[type="text"id="username-input"placeholder="New username"]+button#update-username-button{Update Username} -->
     <div class="chat-container">
       <div class="chat-header">Python Chat</div>
@@ -23,6 +23,6 @@
         <input type="text" id="message-input" placeholder="Type your message here..."/>
         <button id="send-button">Send</button>
     </div>
-    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
   </body>
 </html>

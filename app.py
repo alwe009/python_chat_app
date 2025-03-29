@@ -1,4 +1,3 @@
-# save this as app.py
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO, emit
 import random
@@ -6,7 +5,7 @@ import random
 app = Flask(__name__)
 socketio = SocketIO(app)
 
-# python dict Stor connected users. Key is socketid value is username and avatar
+# python dict Store connected users. Key is socketid value is username and avatarURL
 users = {}
 
 
@@ -43,7 +42,7 @@ def handle_message(data):
     if user:
         emit(
             "new_message",
-            {"username": user["username"], "avatar": user["avatar"], "message": data},
+            {"username": user["username"], "avatar": user["avatar"], "message": data["message"]},
             broadcast=True,
         )
 
